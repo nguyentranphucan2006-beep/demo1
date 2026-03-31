@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Valorant Fanshop — Trang chủ</title>
+<link rel="icon" type="image/png" href="../background/logo.png"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/common.css"/>
+<link rel="stylesheet" href="../css/index-page.css"/>
+</head>
+<body class="index-body">
+
+<!-- ===== NAVBAR ===== -->
+<nav class="site-navbar navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="ntpa_index.html">
+      <span class="brand-icon"><i class="fa-solid fa-bolt"></i></span>
+      Valorant<span class="brand-accent">Shop</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="ntpa_index.html">Trang chủ</a></li>
+        <li class="nav-item"><a class="nav-link" href="ntpa_products.html">Sản phẩm</a></li>
+        <li class="nav-item"><a class="nav-link" href="ntpa_about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="ntpa_contact.html">Liên hệ</a></li>
+      </ul>
+      <div class="nav-actions d-flex gap-2 align-items-center">
+        <a class="nav-btn-wish" href="ntpa_wishlist.html">
+          <i class="fa-regular fa-heart"></i> Wishlist
+        </a>
+        <a class="nav-btn-cart" href="ntpa_cart.html">
+          <i class="fa-solid fa-bag-shopping"></i> Giỏ hàng
+          <span class="cart-badge" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="container py-4">
+
+  <!-- HERO CAROUSEL -->
+  <div id="heroCarousel" class="hero-carousel-wrapper carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../background/contact.webp" alt="Banner 1"/>
+        <div class="carousel-caption">
+          <h2>Phong cách<br>dành cho Agents</h2>
+          <p>Thời trang & phụ kiện Valorant chính hãng</p>
+          <a href="ntpa_products.html" class="btn-accent">Khám phá ngay <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../background/bg-about.jpg" alt="Banner 2"/>
+        <div class="carousel-caption">
+          <h2>Bộ sưu tập<br>mới nhất 2025</h2>
+          <p>Hoodie, áo thun, phụ kiện — chất lượng cao</p>
+          <a href="ntpa_products.html" class="btn-accent">Xem ngay <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../background/bg-wish.jpg" alt="Banner 3"/>
+        <div class="carousel-caption">
+          <h2>Giao hàng toàn<br>quốc miễn phí</h2>
+          <p>Đơn hàng từ 500.000₫ được miễn phí vận chuyển</p>
+          <a href="ntpa_products.html" class="btn-accent">Mua ngay <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><i class="fa-solid fa-truck-fast"></i> Giao hàng toàn quốc</div>
+    <div class="trust-item"><i class="fa-solid fa-rotate-left"></i> Đổi trả 30 ngày</div>
+    <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Thanh toán an toàn</div>
+    <div class="trust-item"><i class="fa-solid fa-headset"></i> Hỗ trợ 24/7</div>
+    <div class="trust-item"><i class="fa-solid fa-award"></i> Sản phẩm chính hãng</div>
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <div class="section-heading">
+    <div>
+      <h2 class="section-title">Sản phẩm nổi bật</h2>
+      <p class="section-subtitle">Những món hàng được yêu thích nhất</p>
+    </div>
+    <a href="ntpa_products.html" class="btn-ghost">
+      Xem tất cả <i class="fa-solid fa-chevron-right fa-xs"></i>
+    </a>
+  </div>
+
+  <div class="row g-3" id="featuredProducts"></div>
+
+</div>
+
+<!-- ===== CUSTOMER REVIEWS ===== -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <h2 class="section-title">Đánh giá khách hàng</h2>
+        <p class="section-subtitle">Hơn 2.000 đánh giá từ cộng đồng game thủ Việt</p>
+      </div>
+      <div class="reviews-overall">
+        <span class="reviews-score">4.9</span>
+        <div>
+          <div class="reviews-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="reviews-count">2.148 đánh giá</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar" style="background: linear-gradient(135deg,#ff4655,#e63e4d);">NT</div>
+          <div class="review-meta">
+            <div class="review-name">Nguyễn Tuấn Anh</div>
+            <div class="review-date">15 tháng 3, 2026</div>
+          </div>
+          <div class="review-stars ms-auto">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="review-badge">Mua: Áo hoodie Valorant Logo</div>
+        <p class="review-text">"Chất vải siêu xịn, in sắc nét, mặc vào đúng chất agent thực sự. Giao hàng nhanh hơn dự kiến 2 ngày. Đây là lần thứ 3 mình order rồi, chắc chắn quay lại!"</p>
+        <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Đã mua hàng</div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card review-card--featured">
+        <div class="review-header">
+          <div class="review-avatar" style="background: linear-gradient(135deg,#38b2ac,#2c9994);">LM</div>
+          <div class="review-meta">
+            <div class="review-name">Lê Minh Châu</div>
+            <div class="review-date">2 tháng 3, 2026</div>
+          </div>
+          <div class="review-stars ms-auto">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="review-badge">Mua: Mô hình Jett Limited</div>
+        <p class="review-text">"Mô hình Jett đẹp hơn ảnh rất nhiều! Chi tiết sắc bén, sơn mịn, đứng vững trên kệ. Được đóng gói kỹ lưỡng, không bị trầy xước gì cả. Shop còn tặng thêm sticker pack cực ngầu!"</p>
+        <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Đã mua hàng</div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar" style="background: linear-gradient(135deg,#f6ad55,#e08d2e);">PH</div>
+          <div class="review-meta">
+            <div class="review-name">Phạm Hải Yến</div>
+            <div class="review-date">20 tháng 2, 2026</div>
+          </div>
+          <div class="review-stars ms-auto">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="review-badge">Mua: Mousepad XL Valorant Map</div>
+        <p class="review-text">"Pad chuẩn size XL, bề mặt trượt mượt, đế cao su không trượt chút nào. Hình in cực đẹp, màu sắc y chang website. Chơi game xịn hơn hẳn!"</p>
+        <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Đã mua hàng</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <a class="footer-brand" href="ntpa_index.html">Valorant<span>Shop</span></a>
+        <p>Cửa hàng dành riêng cho fan Valorant — thời trang, phụ kiện và đồ sưu tập chất lượng cao.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <p class="footer-title">Danh mục</p>
+        <ul>
+          <li><a href="ntpa_products.html">Thời trang</a></li>
+          <li><a href="ntpa_products.html">Phụ kiện</a></li>
+          <li><a href="ntpa_products.html">Sưu tập</a></li>
+          <li><a href="ntpa_products.html">Sale</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <p class="footer-title">Hỗ trợ</p>
+        <ul>
+          <li><a href="ntpa_about.html">Về chúng tôi</a></li>
+          <li><a href="ntpa_contact.html">Liên hệ</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Hướng dẫn size</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <p class="footer-title">Liên hệ</p>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c5f595c5c435e586c5a4d40435e4d425841495e4f44025a42">[email&#160;protected]</a></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i> 0123 456 789</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> TP. Hồ Chí Minh, Việt Nam</div>
+      </div>
+    </div>
+    <hr/>
+    <p class="footer-copy">© 2026 Valorant Fanshop. Thiết kế với <i class="fa-solid fa-heart text-accent" style="font-size:0.75rem"></i> dành cho cộng đồng game thủ Việt.</p>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/common.js"></script>
+<script>
+const CATEGORY_LABEL = { apparel: 'Thời trang', accessory: 'Phụ kiện', collectible: 'Sưu tập' };
+
+function renderFeatured() {
+  const grid = document.getElementById('featuredProducts');
+  grid.innerHTML = '';
+  const featured = ntpa_products.slice(0, 6);
+  featured.forEach(p => {
+    const col = document.createElement('div');
+    col.className = 'col-xl-4 col-md-6';
+    col.innerHTML = `
+      <div class="product-card-index">
+        <div class="card-img-wrap">
+          ${p.images[0] ? `<img src="${p.images[0]}" alt="${p.name}" loading="lazy"/>` : `<div class="no-image-placeholder"><i class="fa-regular fa-image"></i></div>`}
+          <button class="card-wish-btn ${ntpa_isWishlisted(p.id)?'wishlisted':''}" data-id="${p.id}" title="Yêu thích">
+            <i class="fa-${ntpa_isWishlisted(p.id)?'solid':'regular'} fa-heart"></i>
+          </button>
+          ${p.featured ? '<span class="card-badge badge-accent">HOT</span>' : ''}
+        </div>
+        <div class="card-body-custom">
+          <div class="card-category">${CATEGORY_LABEL[p.category] || p.category}</div>
+          <div class="card-name">${p.name}</div>
+          <div class="card-stock"><small style="color:var(--text-dark);font-size:0.75rem">Còn lại: ${p.stock} sản phẩm</small></div>
+          <div class="card-footer-custom">
+            <div class="card-price">${ntpa_formatVND(p.price)}</div>
+            <div class="card-actions">
+              <a class="btn-view" href="ntpa_product.html?id=${p.id}">Xem</a>
+              <button class="btn-add" data-id="${p.id}" data-action="add">
+                <i class="fa-solid fa-plus fa-xs"></i> Thêm
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    grid.appendChild(col);
+  });
+
+  // Wishlist toggle
+  grid.querySelectorAll('.card-wish-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = parseInt(btn.dataset.id);
+      ntpa_toggleWishlist(id, btn);
+      const icon = btn.querySelector('i');
+      if (ntpa_isWishlisted(id)) {
+        icon.className = 'fa-solid fa-heart';
+        btn.classList.add('wishlisted');
+      } else {
+        icon.className = 'fa-regular fa-heart';
+        btn.classList.remove('wishlisted');
+      }
+    });
+  });
+
+  // Add to cart
+  grid.querySelectorAll('[data-action="add"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = parseInt(btn.dataset.id);
+      addToCart(id);
+    });
+  });
+}
+
+function addToCart(id) {
+  const p = ntpa_addToCart(id, 1, {});
+  if (p) ntpa_showToast('Đã thêm "' + p.name + '" vào giỏ hàng!');
+}
+
+function ntpa_showToast(msg) {
+  let t = document.getElementById('siteToast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'siteToast';
+    t.style.cssText = 'position:fixed;bottom:24px;right:24px;z-index:9999;background:#1e293b;border:1px solid rgba(255,70,85,0.35);color:#fff;padding:12px 18px;border-radius:10px;font-family:Lexend,sans-serif;font-size:0.85rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,0.4);transform:translateY(20px);opacity:0;transition:all 0.3s ease;display:flex;align-items:center;gap:8px;';
+    t.innerHTML = '<i class="fa-solid fa-circle-check" style="color:#38b2ac"></i><span id="siteToastMsg"></span>';
+    document.body.appendChild(t);
+  }
+  document.getElementById('siteToastMsg').textContent = msg;
+  t.style.opacity = '1';
+  t.style.transform = 'translateY(0)';
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translateY(20px)'; }, 2500);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderFeatured();
+  ntpa_updateCartCountUI();
+});
+</script>
+  

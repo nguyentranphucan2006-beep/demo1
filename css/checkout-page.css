@@ -1,0 +1,132 @@
+/* ============================================================
+   CHECKOUT-PAGE.CSS — Checkout Page
+   ============================================================ */
+
+.checkout-body { background: var(--primary); }
+
+.checkout-page-title {
+  font-family: var(--font-main); font-weight: 800; font-size: 1.6rem;
+  color: #fff; margin-bottom: 1.75rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.checkout-page-title i { color: var(--accent); }
+
+/* ===== FORM CARD ===== */
+.checkout-form-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+.checkout-form-card .section-label {
+  font-family: var(--font-main); font-weight: 700; font-size: 0.78rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1rem; margin-top: 0.25rem;
+}
+
+.form-field-group { margin-bottom: 1.1rem; }
+.form-field-group label {
+  font-family: var(--font-main); font-weight: 600; font-size: 0.82rem;
+  color: var(--text-muted); letter-spacing: 0.03em; margin-bottom: 0.4rem;
+  display: block;
+}
+.form-field-group .form-input {
+  background: var(--surface-3); border: 1.5px solid var(--border);
+  color: #fff; border-radius: var(--radius-sm);
+  padding: 0.65rem 0.9rem; font-family: var(--font-body); font-size: 0.9rem;
+  transition: var(--transition); width: 100%; outline: none;
+}
+.form-field-group .form-input:focus {
+  border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+  background: var(--surface-2);
+}
+.form-field-group .form-input::placeholder { color: var(--text-dark); }
+.form-field-group .form-input.is-invalid { border-color: var(--accent); }
+
+/* ===== SUMMARY CARD ===== */
+.checkout-summary-card {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.5rem;
+  position: sticky; top: 80px;
+}
+.checkout-summary-title {
+  font-family: var(--font-main); font-weight: 700; font-size: 0.95rem;
+  color: #fff; margin-bottom: 1.25rem; padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.summary-item {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 0.6rem 0; border-bottom: 1px solid var(--border);
+  gap: 8px;
+}
+.summary-item:last-child { border-bottom: none; }
+.summary-item-name {
+  font-size: 0.85rem; color: var(--text-muted); flex: 1; line-height: 1.4;
+}
+.summary-item-qty {
+  font-family: var(--font-main); font-size: 0.75rem;
+  color: var(--text-dark); display: block;
+}
+.summary-item-price {
+  font-family: var(--font-main); font-weight: 700;
+  font-size: 0.88rem; color: var(--gold); white-space: nowrap;
+}
+.summary-divider { border-color: var(--border); margin: 0.5rem 0; }
+.summary-grand-total {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 0.75rem;
+}
+.summary-grand-total .label {
+  font-family: var(--font-main); font-weight: 700; font-size: 0.82rem;
+  color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.summary-grand-total .amount {
+  font-family: var(--font-main); font-weight: 800; font-size: 1.4rem; color: var(--accent);
+}
+.btn-place-order {
+  width: 100%; padding: 0.9rem; font-size: 0.95rem;
+  justify-content: center; margin-top: 1.25rem; border-radius: var(--radius);
+  letter-spacing: 0.04em;
+}
+
+.trust-note {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.78rem; color: var(--text-dark); margin-top: 0.75rem;
+  justify-content: center;
+}
+.trust-note i { color: var(--teal); }
+
+@media (max-width: 991px) { .checkout-summary-card { position: static; margin-bottom: 1.5rem; } }
+
+/* ===== SELECT STYLING ===== */
+.form-input[type="select"], select.form-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23718096' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 2.5rem;
+}
+
+/* ===== COD PAYMENT BOX ===== */
+.payment-method-box {
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.payment-method-label {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.summary-empty-msg {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  text-align: center;
+  padding: 0.75rem 0;
+}
